@@ -1,0 +1,10 @@
+C:\Users\peter\source\repos\SqlForm\SqlForm\bin\Debug\SqlForm.exe.config
+C:\Users\peter\source\repos\SqlForm\SqlForm\bin\Debug\SqlForm.exe
+C:\Users\peter\source\repos\SqlForm\SqlForm\bin\Debug\SqlForm.pdb
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.csprojAssemblyReference.cache
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Properties.Resources.resources
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.csproj.GenerateResource.cache
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.csproj.CoreCompileInputs.cache
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.exe
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.pdb
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Main.resources
