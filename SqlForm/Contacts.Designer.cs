@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFirst = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -53,8 +53,8 @@
             this.dtpEntered = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.cboSearchBy = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -62,6 +62,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +82,7 @@
             this.txtTitle.Location = new System.Drawing.Point(110, 12);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(168, 20);
-            this.txtTitle.TabIndex = 1;
+            this.txtTitle.TabIndex = 0;
             // 
             // label2
             // 
@@ -118,47 +120,47 @@
             this.label5.Text = "City:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtFirst
+            // txtFirstName
             // 
-            this.txtFirst.Location = new System.Drawing.Point(110, 38);
-            this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(168, 20);
-            this.txtFirst.TabIndex = 6;
+            this.txtFirstName.Location = new System.Drawing.Point(110, 38);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(168, 20);
+            this.txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(110, 64);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(168, 20);
-            this.txtLastName.TabIndex = 7;
+            this.txtLastName.TabIndex = 2;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(110, 100);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(168, 20);
-            this.txtAddress.TabIndex = 8;
+            this.txtAddress.TabIndex = 3;
             // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(110, 126);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(168, 20);
-            this.txtCity.TabIndex = 9;
+            this.txtCity.TabIndex = 4;
             // 
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(110, 152);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(168, 20);
-            this.txtState.TabIndex = 10;
+            this.txtState.TabIndex = 5;
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(110, 178);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(168, 20);
-            this.txtPostalCode.TabIndex = 11;
+            this.txtPostalCode.TabIndex = 6;
             // 
             // label6
             // 
@@ -183,14 +185,14 @@
             this.txtWebsite.Location = new System.Drawing.Point(110, 240);
             this.txtWebsite.Name = "txtWebsite";
             this.txtWebsite.Size = new System.Drawing.Size(168, 20);
-            this.txtWebsite.TabIndex = 17;
+            this.txtWebsite.TabIndex = 8;
             // 
             // txtCompany
             // 
             this.txtCompany.Location = new System.Drawing.Point(110, 214);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(168, 20);
-            this.txtCompany.TabIndex = 16;
+            this.txtCompany.TabIndex = 7;
             // 
             // label10
             // 
@@ -215,7 +217,7 @@
             this.txtMobile.Location = new System.Drawing.Point(390, 11);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(168, 20);
-            this.txtMobile.TabIndex = 19;
+            this.txtMobile.TabIndex = 9;
             // 
             // label8
             // 
@@ -228,7 +230,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(292, 37);
+            this.label9.Location = new System.Drawing.Point(292, 62);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 20;
@@ -238,14 +240,14 @@
             // dtpEntered
             // 
             this.dtpEntered.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEntered.Location = new System.Drawing.Point(390, 37);
+            this.dtpEntered.Location = new System.Drawing.Point(390, 62);
             this.dtpEntered.Name = "dtpEntered";
             this.dtpEntered.Size = new System.Drawing.Size(104, 20);
-            this.dtpEntered.TabIndex = 21;
+            this.dtpEntered.TabIndex = 11;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(292, 63);
+            this.label12.Location = new System.Drawing.Point(292, 99);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 20);
             this.label12.TabIndex = 22;
@@ -254,30 +256,31 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(390, 64);
+            this.txtNotes.Location = new System.Drawing.Point(390, 100);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(168, 108);
-            this.txtNotes.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(390, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtNotes.Size = new System.Drawing.Size(168, 97);
+            this.txtNotes.TabIndex = 12;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(292, 213);
+            this.txtSearch.Location = new System.Drawing.Point(390, 214);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(80, 20);
-            this.txtSearch.TabIndex = 24;
-            this.txtSearch.Text = "Search:";
-            this.txtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtSearch.Size = new System.Drawing.Size(168, 20);
+            this.txtSearch.TabIndex = 13;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.Location = new System.Drawing.Point(292, 213);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(80, 20);
+            this.lblSearch.TabIndex = 24;
+            this.lblSearch.Text = "Search:";
+            this.lblSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboSearchBy
             // 
+            this.cboSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSearchBy.FormattingEnabled = true;
             this.cboSearchBy.Items.AddRange(new object[] {
             "By First Name",
@@ -286,7 +289,7 @@
             this.cboSearchBy.Location = new System.Drawing.Point(390, 238);
             this.cboSearchBy.Name = "cboSearchBy";
             this.cboSearchBy.Size = new System.Drawing.Size(168, 21);
-            this.cboSearchBy.TabIndex = 26;
+            this.cboSearchBy.TabIndex = 14;
             // 
             // btnEdit
             // 
@@ -294,7 +297,7 @@
             this.btnEdit.Location = new System.Drawing.Point(483, 304);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 27;
+            this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
@@ -304,9 +307,10 @@
             this.btnAdd.Location = new System.Drawing.Point(483, 333);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 28;
+            this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -314,9 +318,10 @@
             this.btnDelete.Location = new System.Drawing.Point(483, 362);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 29;
+            this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -324,9 +329,10 @@
             this.btnSearch.Location = new System.Drawing.Point(483, 275);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 30;
+            this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvResult
             // 
@@ -338,24 +344,43 @@
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.Size = new System.Drawing.Size(459, 110);
             this.dgvResult.TabIndex = 31;
+            this.dgvResult.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellEndEdit);
             // 
             // bindingSource
             // 
             this.bindingSource.DataSource = typeof(SqlForm.contact);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(390, 36);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(168, 20);
+            this.txtEmail.TabIndex = 10;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Location = new System.Drawing.Point(292, 37);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(80, 20);
+            this.lblEmail.TabIndex = 32;
+            this.lblEmail.Text = "e-mail:";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Contacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 396);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.dgvResult);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.cboSearchBy);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dtpEntered);
@@ -373,7 +398,7 @@
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtFirst);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -398,7 +423,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFirst;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtCity;
@@ -416,8 +441,8 @@
         private System.Windows.Forms.DateTimePicker dtpEntered;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNotes;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cboSearchBy;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
@@ -425,5 +450,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.BindingSource bindingSource;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
     }
 }
