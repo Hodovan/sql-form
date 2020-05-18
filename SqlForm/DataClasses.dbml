@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="address_book" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LEGION-42\SQLEXPRESS;Initial Catalog=address_book;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="SqlForm.Properties.Settings" SettingsPropertyName="address_bookConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.contacts" Member="contacts">
+    <Type Name="contact">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date_added" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="first_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="last_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="postal_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

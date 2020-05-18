@@ -8,3 +8,4 @@ C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.csproj.CoreCompile
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.exe
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.pdb
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Main.resources
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Contacts.resources
