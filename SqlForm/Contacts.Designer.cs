@@ -61,10 +61,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvResult = new System.Windows.Forms.DataGridView();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pibUserImage = new System.Windows.Forms.PictureBox();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnExport = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibUserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -342,13 +347,9 @@
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Location = new System.Drawing.Point(12, 275);
             this.dgvResult.Name = "dgvResult";
-            this.dgvResult.Size = new System.Drawing.Size(459, 110);
+            this.dgvResult.Size = new System.Drawing.Size(465, 110);
             this.dgvResult.TabIndex = 31;
             this.dgvResult.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellEndEdit);
-            // 
-            // bindingSource
-            // 
-            this.bindingSource.DataSource = typeof(SqlForm.contact);
             // 
             // txtEmail
             // 
@@ -366,11 +367,43 @@
             this.lblEmail.Text = "e-mail:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pibUserImage
+            // 
+            this.pibUserImage.Image = global::SqlForm.Properties.Resources.user;
+            this.pibUserImage.Location = new System.Drawing.Point(300, 126);
+            this.pibUserImage.Name = "pibUserImage";
+            this.pibUserImage.Size = new System.Drawing.Size(71, 71);
+            this.pibUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibUserImage.TabIndex = 33;
+            this.pibUserImage.TabStop = false;
+            this.pibUserImage.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pibUserImage_MouseDoubleClick);
+            // 
+            // bindingSource
+            // 
+            this.bindingSource.DataSource = typeof(SqlForm.contact);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnExport.Location = new System.Drawing.Point(500, 62);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(57, 21);
+            this.btnExport.TabIndex = 34;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Szövegfájlok|*.txt";
+            // 
             // Contacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 396);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.pibUserImage);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.dgvResult);
@@ -409,6 +442,7 @@
             this.Text = "Contacts";
             this.Load += new System.EventHandler(this.Contacts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibUserImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -452,5 +486,9 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.PictureBox pibUserImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

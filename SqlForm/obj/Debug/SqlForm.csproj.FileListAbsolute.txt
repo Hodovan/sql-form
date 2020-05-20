@@ -9,3 +9,7 @@ C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.exe
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.pdb
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Main.resources
 C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.Contacts.resources
+C:\Users\peter\source\repos\SqlForm\SqlForm\bin\Debug\SqlForm.exe.manifest
+C:\Users\peter\source\repos\SqlForm\SqlForm\bin\Debug\SqlForm.application
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.exe.manifest
+C:\Users\peter\source\repos\SqlForm\SqlForm\obj\Debug\SqlForm.application

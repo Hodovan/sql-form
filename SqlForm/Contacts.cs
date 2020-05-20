@@ -8,11 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace SqlForm
 {
     public partial class Contacts : Form
     {
+        SqlDataAdapter dataAdapter;         // ALLOW TO BUILD THE CONNECTION BETWEEN THE PROGRAM AND THE DATABASE
+        DataTable table;                    // TABLE TO HOLD THE INFORMATION TO FILL THE DATAGRID VIEW
+        SqlConnection connection;           // VARIABLE TO HOLD THE SQL CONNECTION
 
         string querySelection = "select * from contacts";
 
@@ -20,12 +25,6 @@ namespace SqlForm
                                   @"Initial Catalog=address_book;Integrated Security=True;" +
                                   @"Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;" +
                                   @"ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-        SqlConnection connection;
-        SqlDataAdapter dataAdapter;
-        DataTable table;
-        SqlCommandBuilder commandBuilder;
-
         public Contacts()
         {
             InitializeComponent();
@@ -63,11 +62,11 @@ namespace SqlForm
 
             string insert = @"insert into contacts(date_added, company, website, title, " +
                             @"first_name, last_name, address, city, state, postal_code, " +
-                            @"mobile, email, notes)" +
+                            @"mobile, email, notes, image)" +
 
                             @"values(@date_added, @company, @website, @title, " +
                             @"@first_name, @last_name, @address, @city, @state, @postal_code, " +
-                            @"@mobile, @email, @notes)" ;
+                            @"@mobile, @email, @notes, @image)" ;
 
             using (connection = new SqlConnection(connectionString))
             {
@@ -90,6 +89,15 @@ namespace SqlForm
                     command.Parameters.AddWithValue("email", txtEmail.Text);
                     command.Parameters.AddWithValue("notes", txtNotes.Text);
 
+                    if (!string.IsNullOrEmpty(openFileDialog.FileName))
+                    {
+                        command.Parameters.AddWithValue("image", File.ReadAllBytes(openFileDialog.FileName));   // CONVERT IMAGE TO BYTES FOR SAVING
+                    }
+                    else
+                    {
+                        command.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
+                    }
+
                     command.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -105,7 +113,7 @@ namespace SqlForm
 
         private void dgvResult_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);        // NEW SQL COMMAND BUILDER OBJECT
             dataAdapter.UpdateCommand = commandBuilder.GetUpdateCommand();  // GET THE UPDATE COMMAND
 
             try
@@ -178,6 +186,43 @@ namespace SqlForm
             {
                 MessageBox.Show("No record found!", "Searching result", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+        }
+
+        private void pibUserImage_MouseClick(object sender, MouseEventArgs e)
+        {
+            var form = new Form();
+            form.BackgroundImage = pibUserImage.Image;
+            form.Size = pibUserImage.Image.Size;
+            form.Show();
+        }
+
+        private void pibUserImage_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pibUserImage.Load(openFileDialog.FileName);
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (var streamWriter = new StreamWriter(saveFileDialog.FileName))
+                {
+                    foreach (DataGridViewRow row in dgvResult.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            streamWriter.Write(cell.Value);  
+                        }
+
+                        streamWriter.WriteLine();
+                    }
+                }
+
+                Process.Start("notepad.exe", saveFileDialog.FileName);
             }
         }
     }
